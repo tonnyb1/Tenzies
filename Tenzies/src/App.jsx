@@ -52,6 +52,16 @@ function App() {
       }))
   }
 
+  function countRolls() {
+    let count = 0
+    dies.forEach(die => {
+      if (die.isHeld) {
+        count++
+      }
+    })
+    return count
+  }
+
   const square = dies.map(die => (
     <Tile
       key={die.id}
